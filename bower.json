@@ -1,0 +1,17 @@
+{
+  "name": "rerikh",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Museum+"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aikovalenko/rerikh",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
