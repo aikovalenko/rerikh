@@ -175,10 +175,12 @@ ul {
   max-height: 370px;
   width: 100%;
   height: 32%;
+  height: 34vh;
   //height: 170px;
   background-image: url("../img/des/shadow.png");
   background-repeat: repeat no-repeat;
   background-size: contain;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 23%, rgba(255,255,255,0) 100%);
   //background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
   z-index: 1;
 }
@@ -225,7 +227,7 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .section--content__list__item {
   width: 32%;
