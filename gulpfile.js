@@ -97,7 +97,7 @@ gulp.task('style:build', function () {
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
-		.pipe(prefixer())
+		.pipe(prefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css))
     .on('end', function () {
@@ -108,7 +108,7 @@ gulp.task('style:build', function () {
 gulp.task('style:dist', function () {
 	gulp.src(path.src.style)
 		.pipe(sass())
-		.pipe(prefixer())
+		.pipe(prefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 		.pipe(cleanCSS())
 		.pipe(gulp.dest(path.dist.css));
 });
