@@ -6,13 +6,13 @@
 @import "partials/footer";
 
 
-@include fontFace('circle_thin','../fonts/crc15');
-@include fontFace('circle_extrathin','../fonts/crc25');
-@include fontFace('circle_light','../fonts/crc35');
-@include fontFace('circle_regular','../fonts/crc55');
-@include fontFace('circle_bold','../fonts/crc65');
-@include fontFace('circle_extrabold','../fonts/crc75');
-@include fontFace('TelingaterDisplayC','../fonts/TelingaterDisplayC');
+@include fontFace('circle','/fonts/crc15', 200);
+@include fontFace('circle','/fonts/crc25', 100);
+@include fontFace('circle','/fonts/crc35', 300);
+@include fontFace('circle','/fonts/crc55', 400);
+//@include fontFace('circle_bold','/fonts/crc65');
+//@include fontFace('circle_extrabold','/fonts/crc75');
+@include fontFace('TelingaterDisplayC','/fonts/telingaterdisplayc', 400);
 
 .fp-tableCell {
   display: block;
@@ -64,7 +64,7 @@ ul {
   overflow: hidden;
 
   height: 140%;
-  background-image: url("../img/des/portrait.png");
+  background-image: url("/images/des/portrait.png");
   background-position: left top -35%;
   background-size: cover;
   left: 14.5%;
@@ -81,7 +81,7 @@ ul {
   background-repeat: no-repeat;
   overflow: hidden;
 
-  background-image: url("../img/des/statues.jpg");
+  background-image: url("/images/des/statues.jpg");
   background-position: left top 12.5%;
   background-size: 140%;
   z-index: -2;
@@ -159,7 +159,8 @@ ul {
 .support {
   margin-left: 20px;
   text-align: left;
-  font-family: "circle_light";
+  font-family: "circle";
+  font-weight: 300;
   font-size: 18px;
   color: #fffefe;
   .text {
@@ -184,7 +185,7 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
   border: 30px solid pink;
-  border-image: url("../img/des/btn-border.png") 30;
+  border-image: url("/images/des/btn_border.png") 30;
   text-align: center;
 }
 .header {
@@ -205,7 +206,7 @@ ul {
 //поломанный градиент в сафари
 .os.x {
   .header {
-    background-image: url("../img/des/shadow.png");
+    background-image: url("/images/des/shadow.png");
     background-repeat: repeat no-repeat;
     background-size: contain;
   }
@@ -213,9 +214,10 @@ ul {
 
 .section--content__about {
   background-color: #1b1c34;
-  background-image: url("../img/des/hills.png");
+  background-image: url("/images/des/hills.png");
   background-size: cover;
-  font-family: "circle_light";
+  font-family: "circle";
+  font-weight: 300;
 }
 .section--content__about__inner {
   display: flex;
@@ -298,22 +300,25 @@ ul {
   }
   .date {
     margin-bottom: 15px;
-    font-family: "circle_light";
+    font-family: "circle";
     font-size: 16px;
     color: #bad2ff;
+    font-weight: 300;
   }
   .title {
     a {
-      font-family: "circle_regular";
+      font-family: "circle";
+      font-weight: 400;
       font-size: 22px;
       color: #ffba6a;
       text-decoration: none;
     }
   }
   .text {
-    font-family: "circle_light";
+    font-family: "circle";
     font-size: 16px;
     color: #fffefe;
+    font-weight: 300;
   }
 }
 .btn--news {
@@ -351,7 +356,7 @@ ul {
      width: 200px;
      font-size: 20px;
      border: 20px solid pink;
-     border-image: url("../img/des/btn-border.png") 30;
+     border-image: url("/images/des/btn_border.png") 30;
   }
 }
 @media screen and (max-width: 1420px) {
@@ -521,7 +526,7 @@ ul {
     width: 150px;
     font-size: 18px;
     border: 15px solid pink;
-    border-image: url("../img/des/btn-border.png") 30;
+    border-image: url("/images/des/btn_border.png") 30;
   }
   .btn--news {
     margin-top: 0;
@@ -536,7 +541,7 @@ ul {
     width: 200px;
     font-size: 20px;
     border: 20px solid pink;
-    border-image: url("../img/des/btn-border.png") 30;
+    border-image: url("/images/des/btn_border.png") 30;
   }
   .section--intro__content {
     .logo {
