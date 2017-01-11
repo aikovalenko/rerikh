@@ -8,8 +8,8 @@
   //flex-flow: row wrap;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
+  //padding-left: 40px;
+  //padding-right: 40px;
   .support, .partners {
     display: inline-block;
     vertical-align: middle;
@@ -21,8 +21,8 @@
     a {
       display: inline-block;
       vertical-align: middle;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 45px;
+      margin-right: 45px;
       img {
         width: 100%;
       }
@@ -30,7 +30,7 @@
   }
   nav {
     font-size: 0;
-    margin-right: 20px;
+    //margin-right: 20px;
     margin-top: 25px;
     li {
       display: inline-block;
@@ -54,7 +54,7 @@
     justify-content: space-between;
     flex-flow: row wrap;
     margin-top: 20px;
-    padding-right: 20px;
+    //padding-right: 20px;
     font-size: 0;
     .link {
       display: inline-block;
@@ -67,6 +67,10 @@
       border-bottom: 1px solid #545a72;
     }
   }
+}
+.footer--inside__left {
+  display: flex;
+  align-items: center;
 }
 .link--conditions {
   margin-right: 88px;

@@ -2,7 +2,11 @@
 <html>
   @@include('partials/head.html')
   <body class='main'>
-  @@include('partials/header.html')
+    <header class="header header--homepage">
+      <div class="wrapper">
+
+      </div>
+    </header>
     <div id="fullpage" class="fullpage">
       <section class="section section--intro">
         <div class="wrapper">
@@ -53,7 +57,7 @@
         </div>
 
         <div class="section--content__list">
-          <div class="wrapper--decoration">
+          <div class="wrapper--np">
             <div class="decoration"></div>
           </div>
           <div class="wrapper">
@@ -103,17 +107,6 @@
                 <a class="btn btn--news" href="" title="">Новости</a>
               </div>
             </div>
-            <div class="" style="border: 3px solid white;">
-              <h2 style="color: #fff">Тестовый блок</h2><br>
-              <div class="test">
-                <img class="target-image" src="images/des/pic2.jpg" alt="">
-                <a href="" class="mask"></a>
-              </div>
-              <div class="test">
-                <img class="target-image" src="images/des/pic1.jpg" alt="">
-                <a href="" class="mask"></a>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -123,5 +116,32 @@
     </div>
     <script src='/js/libs.js'></script>
     <script src='/js/scripts.js'></script>
+    <script>
+        var arrayOfIDs = $('[data-menuanchor]').map(function() { return $(this).data('menuanchor') }).get();
+
+        $('#fullpage').fullpage({
+            autoScrolling: true,
+            css3: true,
+            anchors:['0', '1'],
+            scrollingSpeed: 1200,
+            verticalCentered: true,
+            scrollOverflow: true,
+            controlArrows: false,
+            onLeave: function(index, nextIndex, direction){
+                var leavingSection = $(this),
+                    portrait = $(".section--intro");
+
+
+                //after leaving section 2
+                if(index == 1 && direction =='down'){
+                    portrait.addClass("portrait-parallax");
+                }
+
+                else if(index == 2 && direction == 'up'){
+                    portrait.removeClass("portrait-parallax");
+                }
+            }
+        });
+    </script>
   </body>
 </html>
