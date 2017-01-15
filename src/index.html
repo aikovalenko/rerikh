@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
   @@include('partials/head.html')
-  <body class='main'>
+  <body class='main homepage'>
     <header class="header header--homepage">
       <div class="wrapper">
-
+        <div class="header__menu">
+          <a href=""><img width="50" src="/images/des/logo.svg"></a>
+          <ul>
+            <li class=""><a href="">каталог</a></li>
+            <li><a href="">архив</a></li>
+            <li><a href="">наследие</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">библиотека</a></li>
+            <li><a href="">О проекте</a></li>
+          </ul>
+          <div id="menu-button" class="menu-button mobile-view">
+            <span></span>
+          </div>
+        </div>
       </div>
     </header>
     <div id="fullpage" class="fullpage">
@@ -31,6 +44,15 @@
               Российской Федерации</div>
               <a class="" href="" title=""><img src="/images/des/culture_logo.png"></a>
             </div>
+            <div class="header__control">
+              <div class="lang">
+                <a href="/" class="active">RU</a><span> / </span><a href="/">EN</a>
+              </div>
+              <div class="search">
+                <a href="">j</a>
+              </div>
+            </div>
+            <div class="slide-down"></div>
           </div>
         </div>
       </section>
@@ -118,30 +140,47 @@
     <script src='/js/scripts.js'></script>
     <script>
         var arrayOfIDs = $('[data-menuanchor]').map(function() { return $(this).data('menuanchor') }).get();
+        var windowWidth = $( window ).width();
+        var leavingSection = $(this),
+            portrait = $(".section--intro"),
+            header = $(".header__menu");
+        if ( windowWidth > 641) {
+            $('#fullpage').fullpage({
+                autoScrolling: true,
+                css3: true,
+                anchors: ['0', '1'],
+                scrollingSpeed: 1200,
+                verticalCentered: true,
+                scrollOverflow: true,
+                controlArrows: false,
+                responsiveWidth: 641,
+                onLeave: function (index, nextIndex, direction) {
 
-        $('#fullpage').fullpage({
-            autoScrolling: true,
-            css3: true,
-            anchors:['0', '1'],
-            scrollingSpeed: 1200,
-            verticalCentered: true,
-            scrollOverflow: true,
-            controlArrows: false,
-            onLeave: function(index, nextIndex, direction){
-                var leavingSection = $(this),
-                    portrait = $(".section--intro");
 
 
-                //after leaving section 2
-                if(index == 1 && direction =='down'){
-                    portrait.addClass("portrait-parallax");
+                    //after leaving section 2
+                    if (index == 1 && direction == 'down') {
+                        portrait.addClass("portrait-parallax");
+                        header.addClass("roll");
+
+                    }
+
+                    else if (index == 2 && direction == 'up') {
+                        portrait.removeClass("portrait-parallax");
+                        header.removeClass("roll");
+                    }
                 }
-
-                else if(index == 2 && direction == 'up'){
-                    portrait.removeClass("portrait-parallax");
-                }
-            }
-        });
+            });
+            setTimeout(function () {
+                $(".slide-down").addClass("slide-down-anim");
+            }, 1000);
+            $(document).on('click', '.slide-down', function () {
+                $.fn.fullpage.moveSectionDown();
+            });
+        }
+        else {
+            header.addClass("roll");
+        }
     </script>
   </body>
 </html>
