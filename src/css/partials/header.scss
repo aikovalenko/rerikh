@@ -334,11 +334,12 @@
   opacity: 0;
   transition: all 0.5s ease-in-out;
   z-index: -1;
+  overflow-x: auto;
   .menu {
     //width: 550px;
     margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 125px;
+    padding-bottom: 0;
     text-align: center;
     //border: 1px solid #FFEAA6;
     ul {
@@ -370,6 +371,21 @@
           color: #cf9f67;
         }
       }
+    }
+  }
+  .header__control {
+    position: absolute;
+    top: 140px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    .search {
+      margin: 0;
+    }
+    .lang {
+      margin: 0;
+      margin-top: 10px;
     }
   }
 }

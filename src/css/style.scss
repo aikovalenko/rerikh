@@ -791,6 +791,7 @@ ul {
   }
 }
 .catalog__top {
+  position: relative;
   background-position: center;
   background-size: cover;
   h1 {
@@ -800,6 +801,20 @@ ul {
     color: #fefefe;
     text-transform: uppercase;
     letter-spacing: 4px;
+  }
+  .wrapper {
+    z-index: 2;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url("/images/des/catalog_shadow.png");
+    background-repeat: repeat-x;
   }
 }
 .filters {
@@ -1010,7 +1025,7 @@ ul {
       text-transform: uppercase;
     }
   }
-  .category {
+  .category, .author, .info {
     margin-bottom: 8px;
     font-weight: 400;
     color: #7f91c5;
@@ -1025,6 +1040,7 @@ ul {
       }
     }
   }
+
   .year {
     margin-bottom: 8px;
     color: #7f91c5;
@@ -1095,13 +1111,31 @@ ul {
 .hide {
   display: none !important;
 }
+
+.catalog--library {
+  .catalog__item {
+    width: 48%;
+  }
+  .catalog__item__inner {
+    display: flex;
+  }
+  .catalog__item__image {
+    width: 225px;
+    margin-right: 15px;
+  }
+  .catalog__item__desc {
+    flex: 1;
+  }
+}
+
 @media screen and (max-width: 800px) {
-  .catalog--small {
+  .catalog--small, .catalog--library {
     .catalog__item {
       width: 100%;
     }
     .catalog__item__inner {
       display: flex;
+
     }
     .catalog__item__image {
       width: 160px;
@@ -1113,6 +1147,24 @@ ul {
   }
   .catalog__inner--btn {
     margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .catalog--library {
+    .catalog__item {
+      width: 100%;
+    }
+    .catalog__item__inner {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .catalog__item__image {
+      width: 100%;
+      margin-right: 15px;
+    }
+    .catalog__item__desc {
+      flex: 1;
+    }
   }
 }
 @media screen and (max-width: 1480px) {
@@ -1728,12 +1780,14 @@ div.panel {
     }
   }
   h2 {
+    position: relative;
     margin-top: 111px;
     margin-left: 38px;
     width: 150px;
     font-size: 30px;
     line-height: 40px;
     text-transform: uppercase;
+    z-index: 1;
   }
   .background {
     position: absolute;
@@ -1859,12 +1913,44 @@ div.panel {
     background-image: url("/images/des/background_diaries.png");
   }
 }
+.catalog__menu__sections__item--rerikhs {
+  .catalog__menu__sections__item__inner {
+    background-image: linear-gradient( 123deg, rgb(37,54,122) 0%, rgb(102,137,124) 63%, rgb(167,219,125) 100%);
+  }
+  .background {
+    top: -91px;
+    left: -200px;
+    width: 704px;
+    height: 655px;
+    background-image: url("/images/des/background_rerikhs.png");
+  }
+}
+.catalog__menu__sections__item--about-rerikh {
+  .catalog__menu__sections__item__inner {
+    background-image: url("/images/des/background_about_rerikh.png");
+  }
+}
+.catalog__menu__sections__item--org {
+  .catalog__menu__sections__item__inner {
+    background-image: url("/images/des/background_orgs.png");
+  }
+}
+
 .catalog__menu__sections__item__inner {
   box-sizing: border-box;
   height: 450px;
   margin: -4px;
   position: relative;
 
+}
+.catalog__menu__sections__item--library {
+
+  h2 {
+    width: 210px;
+  }
+  .catalog__menu__sections__item__inner {
+    height: 480px;
+  }
 }
 .filters__form--catalog {
 
@@ -1946,12 +2032,17 @@ div.panel {
       background-image: url("/images/des/background_diaries_adaptive.png"), linear-gradient( -52deg, rgb(114,85,54) 0%, rgb(166,135,79) 63%, rgb(218,184,103) 100%);
     }
   }
+  .catalog__menu__sections__item--rerikhs {
+    .catalog__menu__sections__item__inner {
+      background-image: url("/images/des/background_rerikhs_adaptive.png"), linear-gradient( 123deg, rgb(37,54,122) 0%, rgb(102,137,124) 63%, rgb(167,219,125) 100%);
+    }
+  }
 }
-@media screen and (max-width: 1200px) and (min-width: 1000px){
+@media screen and (max-width: 1320px) and (min-width: 1000px){
   .catalog__menu__sections__item {
     h2 {
       margin-top: 111px;
-      margin-left: 38px;
+      margin-left: 25px;
       width: 150px;
       font-size: 20px;
       line-height: 30px;
@@ -2394,6 +2485,9 @@ div.panel {
     h1 {
       margin-top: 50px;
     }
+    &:after {
+      display: none;
+    }
   }
 }
 @media screen and (max-width: 641px) {
@@ -2440,6 +2534,7 @@ div.panel {
 .search-form {
   display: table-cell;
   vertical-align: middle;
+  box-sizing: border-box;
   button {
     background-color: transparent;
     border: 30px solid pink;
@@ -2452,6 +2547,7 @@ div.panel {
     outline: none;
   }
   input {
+    box-sizing: border-box;
     width: 560px;
     height: 54px;
     background: none;
@@ -2472,6 +2568,7 @@ div.panel {
   .search-form {
     padding: 0 20px;
     input {
+      box-sizing: border-box;
       width: 100%;
       margin-bottom: 20px;
     }
