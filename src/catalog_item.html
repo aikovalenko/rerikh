@@ -7,8 +7,10 @@
       <div class="wrapper">
         <div class="breadcrumbs">
           <ul>
-            <li><span>каталог — масляная живопись</span></li>
-
+            <li><a href="/site/index.php">Рериховское наследие</a>  </li>
+            <li><a href="/catalogue/index.php">Каталог</a></li>
+            <li><a href="/catalogue/canvas/index.php">Масляная живопись</a></li>
+            <li class="active">Этюд лежащего мальчика</li>
           </ul>
         </div>
       </div>
@@ -20,7 +22,7 @@
           <div class="slider-for">
             <div>
               <div class="pic-wrapper DZ-call">
-                <img src="http://placehold.it/785x521">
+                <img src="/images/des/catalog_item_1.jpg">
                 <div class="dz-call-btn"></div>
               </div>
             </div>
@@ -34,6 +36,11 @@
                 <img src="/images/des/catalog_item_3.jpg">
               </div>
             </div>
+            <div>
+              <div class="pic-wrapper">
+                <img src="/images/des/catalog_item_4.jpg">
+              </div>
+            </div>
           </div>
           <div class="slider-decor"></div>
           <div class="slider-nav">
@@ -42,35 +49,21 @@
                 <img src="/images/des/catalog_item_1.jpg">
               </div>
             </div>
-            <div>
-              <div class="thumbnail">
-                <img src="/images/des/catalog_item_2.jpg">
-              </div>
-            </div>
-            <div>
-              <div class="thumbnail">
-                <img src="/images/des/catalog_item_3.jpg">
-              </div>
-            </div>
-            <div>
-              <div class="thumbnail">
-                <img src="/images/des/catalog_item_4.jpg">
-              </div>
-            </div>
           </div>
           <div class="slider-decor rotate"></div>
           <div class="social social--desktop">
             <div class="social__title">Поделиться</div>
             <div class="social__btns">
-              <ul>
-                <li><a href="" title=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="" title=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-              </ul>
+              <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,pinterest,twitter,lj"></div>
+              <!--<ul>-->
+                <!--<li><a href="" title=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+                <!--<li><a href="" title=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>-->
+              <!--</ul>-->
             </div>
           </div>
         </div>
@@ -86,7 +79,12 @@
           </div>
           <div class="specs">
             <div class="specs__year">1937</div>
-            <div class="specs__material"><span>Холст, масло</span></div>
+            <div class="specs__material" style="">
+              <span>
+                <a href="/reference/materials/canvas/index.php">холст</a>,
+                <a href="/reference/materials/oil/index.php">масло</a>
+              </span>
+            </div>
             <div class="specs__size">30 × 45 см</div>
           </div>
           <div class="category">
@@ -134,15 +132,7 @@
         <div class="social social--adaptive">
           <div class="social__title">Поделиться</div>
           <div class="social__btns">
-            <ul>
-              <li><a href="" title=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="" title=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-            </ul>
+            <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,pinterest,twitter,lj"></div>
           </div>
         </div>
       </div>
@@ -158,7 +148,8 @@
       <div class="info-button"></div>
       <iframe src="DZ/material_lace/viewer.html" frameborder="no" width="100%" height="100%" name="ifr1" id="ifr1"></iframe>
     </div>
-
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="//yastatic.net/share2/share.js"></script>
     <script src='/js/libs.js'></script>
     <script src='/js/scripts.js'></script>
   </body>
