@@ -5,7 +5,7 @@
     <header class="header header--homepage">
       <div class="wrapper">
         <div class="header__menu">
-          <a href=""><img width="50" src="/images/des/logo.svg"></a>
+          <a href=""><img width="50" height="50" src="/images/des/logo.svg"></a>
           <ul>
             <li class=""><a href="">каталог</a></li>
             <li><a href="">архив</a></li>
@@ -21,10 +21,10 @@
       </div>
     </header>
     <div id="fullpage" class="fullpage">
-      <section class="section section--intro">
+      <section class="section section--intro loading">
         <div class="wrapper">
           <div class="section--intro__content">
-            <div class="logo"><img width="100" src="/images/des/logo.svg"></div>
+            <div class="logo"><img width="100" height="100" src="/images/des/logo.svg"></div>
             <div class="title">
               <h1>Рериховское наследие</h1>
             </div>
@@ -136,6 +136,7 @@
 
       </section>
     </div>
+    <!--<div class="preloader"><img src="/images/des/preloader.svg"></div>-->
     @@include('partials/modals.html')
     <script src='/js/libs.js'></script>
     <script src='/js/scripts.js'></script>
@@ -174,7 +175,8 @@
             });
             setTimeout(function () {
                 $(".slide-down").addClass("slide-down-anim");
-            }, 1000);
+                portrait.removeClass("loading");
+            }, 200);
             $(document).on('click', '.slide-down', function () {
                 $.fn.fullpage.moveSectionDown();
             });

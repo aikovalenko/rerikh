@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html>
   @@include('partials/head.html')
-  <body class='main'>
-    <section class="catalog__top" style="background-image: url('/images/des/oil.jpg')">
+  <body class='main page-filtered'>
+    <section class="catalog__top" style="background-image: url('/images/des/filtered_back.jpg')">
       @@include('partials/header.html')
       <div class="wrapper">
         <div class="breadcrumbs">
           <ul>
-            <li><a href="">главная</a></li>
-            <li><span class="divider">u</span></li>
-            <li><a href="">каталог</a></li>
-            <li><span class="divider">u</span></li>
-            <li><a href="">масляная живопись</a></li>
-            <li><span class="divider">u</span></li>
-            <li><span>Собрание Кэмпбелл-Стибе</span></li>
-          </ul>
-          <ul>
-            <li><a href="/site/index.php">Рериховское наследие</a>  </li>
-            <li><a href="/catalogue/index.php">Каталог</a></li>
-            <li><a href="/catalogue/canvas/index.php">Масляная живопись</a></li>
-            <li class="active">Этюд лежащего мальчика</li>
+            <li><a href="">Рериховское наследие</a>  </li>
+            <li><a href="">Каталог</a></li>
+            <li class="active">Результаты  поиска</li>
           </ul>
         </div>
-        <h1>масляная  живопись</h1>
+        <h1>Результаты  поиска</h1>
         <div class="filters">
           <div class="filters__links">
             <span class="filters__links__title">
@@ -36,31 +26,83 @@
                   <li><a href="" id="by-author">по автору</a></li>
                 </ul>
               </span>
-
             </span>
             <a href="" class="show-list">показать списком</a>
             <a href="" class="show-big hide">показать крупно</a>
             <a href="" class="desktop-view">перейти к вступительной статье</a>
             <a href="" class="mobile-view">вступительная статья</a>
           </div>
-          <div class="filters__form">
-            <form>
-              <div class="form-control">
-                <input id="1" type="checkbox"><label for="1">Музей Востока</label>
-              </div>
-              <div class="form-control">
-                <input id="2" type="checkbox"><label for="2">Музей-институт семьи Рерихов</label>
-              </div>
-              <div class="form-control">
-                <input id="3" type="checkbox"><label for="3">Музей Николая Рериха (NY)</label>
-              </div>
-            </form>
+          <div class="filters__links filters-switch">
+            <span href="" class="filters-switcher">—  Скрыть фильтры</span>
           </div>
         </div>
       </div>
     </section>
     <section class="catalog">
       <div class="wrapper">
+        <div class="filters-more open">
+          <form class="">
+            <div class="filters-more__checkboxes">
+              <div class="column">
+                <div class="form-control">
+                  <input id="1" type="checkbox"><label for="1">Государственный Музей Востока<br>
+                  (Москва)</label>
+                </div>
+                <div class="form-control">
+                  <input id="2" type="checkbox"><label for="2">Музей-институт семьи Рерихов<br>
+                  (Санкт-Петербург)</label>
+                </div>
+                <div class="form-control">
+                  <input id="3" type="checkbox"><label for="3">Музей Николая Рериха<br>
+                  (Нью-Йорк)</label>
+                </div>
+              </div>
+              <div class="column">
+                <div class="form-control">
+                  <input id="4" type="checkbox"><label for="4">Масляная живопись</label>
+                </div>
+                <div class="form-control">
+                  <input id="5" type="checkbox"><label for="5">Темперная живопись</label>
+                </div>
+                <div class="form-control">
+                  <input id="6" type="checkbox"><label for="6">Гуашь</label>
+                </div>
+                <div class="form-control">
+                  <input id="7" type="checkbox"><label for="7">Карандашь</label>
+                </div>
+                <div class="form-control">
+                  <input id="8" type="checkbox"><label for="8">Тушь</label>
+                </div>
+                <div class="form-control">
+                  <input id="9" type="checkbox"><label for="9">Пастель</label>
+                </div>
+              </div>
+              <div class="column">
+                <div class="form-control">
+                  <input id="10" type="checkbox"><label for="10">Холст</label>
+                </div>
+                <div class="form-control">
+                  <input id="11" type="checkbox"><label for="11">Картон</label>
+                </div>
+                <div class="form-control">
+                  <input id="12" type="checkbox"><label for="12">Фанера</label>
+                </div>
+                <div class="form-control">
+                  <input id="13" type="checkbox"><label for="13">Дерево</label>
+                </div>
+                <div class="form-control">
+                  <input id="14" type="checkbox"><label for="14">Бумага</label>
+                </div>
+                <div class="form-control">
+                  <input id="15" type="checkbox"><label for="15">Бумага на картоне</label>
+                </div>
+              </div>
+            </div>
+            <div class="filters-more__submit">
+              <a href="" class="btn">показать<br>в каталоге</a>
+            </div>
+          </form>
+        </div>
         <div class="catalog__inner">
           <div class="catalog__item">
             <div class="catalog__item__inner">
