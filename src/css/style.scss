@@ -3072,6 +3072,13 @@ button {
       margin-top: 40px;
     }
   }
+  .filters {
+    justify-content: space-between;
+    .filters__links {
+      width: auto;
+    }
+  }
+
 }
 .filters-switch {
   justify-content: flex-end;
@@ -3112,6 +3119,7 @@ button {
     width: 290px;
     margin-right: 100px;
     label {
+      width: 100%;
       float: left;
       margin-bottom: 25px;
     }
@@ -3160,18 +3168,34 @@ button {
 @media screen and (max-width: 970px) {
   .filters-more__submit {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 @media screen and (max-width: 760px) {
   .filters-more__checkboxes {
     flex-wrap: wrap;
+    width: 100%;
   }
   .filters-more {
+    .column:nth-child(1) {
+      width: 100%;
+    }
     .column {
       width: 100%;
       margin-right: 0 !important;
     }
+    form {
+      display: block;
+    }
+  }
+  .page-filtered .catalog__top h1 {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .filters-more {
+    margin-right: -25px;
+    margin-left: -25px;
   }
 }
 #map iframe {     width: 100% !important; height: 100% !important; }
