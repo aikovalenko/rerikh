@@ -8,19 +8,19 @@
   //height: 170px;
   background-repeat: repeat no-repeat;
   background-size: contain;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 23%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.6) 23%, transparent 100%);
   //background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.7)), color-stop(23%, rgba(0,0,0,0.54)), color-stop(100%, rgba(255,255,255,0))) !important;
   z-index: 1;
 }
 
 //поломанный градиент в сафари
-.safari.os.x {
-  .header {
-    background-image: url("/images/des/shadow.png");
-    background-repeat: repeat no-repeat;
-    background-size: contain;
-  }
-}
+//.safari.os.x {
+//  .header {
+//    background-image: url("/images/des/shadow.png");
+//    background-repeat: repeat no-repeat;
+//    background-size: contain;
+//  }
+//}
 .header--border {
   max-width: 1460px !important;
   border: 25px solid pink;
