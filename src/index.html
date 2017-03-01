@@ -145,6 +145,7 @@
         var windowWidth = $( window ).width();
         var leavingSection = $(this),
             portrait = $(".section--intro"),
+            menu = $(".menu-wrap"),
             header = $(".header__menu");
         if ( windowWidth > 641) {
             $('#fullpage').fullpage({
@@ -164,13 +165,13 @@
                     if (index == 1 && direction == 'down') {
                         portrait.addClass("portrait-parallax");
                         header.addClass("roll");
-
                     }
 
                     else if (index == 2 && direction == 'up') {
                         portrait.removeClass("portrait-parallax");
                         header.removeClass("roll");
                     }
+
                 }
             });
             setTimeout(function () {
