@@ -309,10 +309,10 @@ ul {
   padding-top: 280px;
   padding-bottom: 125px;
   .video {
-    width: 68%;
+    width: 64%;
   }
   .description {
-    width: 29%;
+    width: 33%;
     text-align: center;
     p {
       margin-top: 0;
@@ -838,6 +838,7 @@ ul {
 }
 .filters {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0;
   padding: 0 30px;
   background-color: #0c101f;
@@ -875,7 +876,12 @@ ul {
     margin-right: 10px;
     color: #6381e4;
   }
+  select {
+    width: 100%;
+    margin-top: 6px;
+  }
 }
+
 .form-control {
   /* Base for label styling */
   [type="checkbox"]:not(:checked),
@@ -1066,9 +1072,9 @@ ul {
   margin-bottom: 40px;
 }
 .catalog__item__desc {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
   font-family: "circle", Arial;
   .name {
     margin-bottom: 10px;
@@ -1113,6 +1119,13 @@ ul {
         transition: $all2;
       }
     }
+  }
+}
+.catalog--library {
+  .catalog__item__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .catalog__inner--btn {
@@ -1309,6 +1322,9 @@ ul {
   }
   .catalog__top h1 {
     margin-top: 100px;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 18px;
   }
   .catalog {
     padding-top: 95px;
@@ -1883,7 +1899,7 @@ div.panel {
     height: 100%;
     position: absolute;
     width: 100%;
-    z-index: 3;
+    z-index: 1;
     margin: -15px;
     &:hover {
       border: 15px solid pink;
@@ -1916,6 +1932,7 @@ div.panel {
     }
   }
 }
+
 .catalog__menu__sections__item--east {
   //width: 66.66666%;
   .catalog__menu__sections__item__inner {
@@ -2095,6 +2112,7 @@ div.panel {
   }
   .form-control {
     display: flex;
+    flex-wrap: wrap;
   }
   label {
     float: left;
@@ -2243,6 +2261,9 @@ div.panel {
     background-size: cover;
     background-position: center 77%;
   }
+  .catalog__menu--heritage .catalog__menu__sections__item__inner {
+    height: 170px;
+  }
   .filters__form--catalog {
     padding: 20px;
   }
@@ -2253,6 +2274,7 @@ div.panel {
 @media screen and (max-width: 641px) {
   .catalog__menu {
     margin: 0;
+    margin-bottom: 25px;
     padding-top: 120px;
   }
   .catalog__menu__sections__item {
@@ -2594,11 +2616,11 @@ div.panel {
     padding-left: 25px;
   }
 }
-.catalog__menu--heritage {
-  .catalog__menu__filters {
-    background-color: transparent;
-  }
-}
+//.catalog__menu--heritage {
+//  .catalog__menu__filters {
+//    background-color: transparent;
+//  }
+//}
 .catalog__menu--heritage__types {
   ul {
     height: 450px;
@@ -2668,13 +2690,14 @@ div.panel {
   left: -100%;
   background-color: #11182f;
   transition: all .5s ease-in;
-  z-index: 9999;
+  z-index: -1;
   .close {
-    z-index: 9999;
+
   }
   &.open {
     left: 0;
     transition: all .5s ease-out;
+    z-index: 9999;
   }
 }
 .search-modal__inner {
@@ -3457,5 +3480,82 @@ button {
   }
   .lg-sub-html {
     bottom: 40px;
+  }
+}
+.filters__form--selects {
+  padding: 20px 50px;
+}
+.catalog__menu--heritage {
+  .selectric-wrapper {
+    width: 100%;
+    max-width: 255px;
+    margin-top: 6px;
+  }
+  .selectric .label {
+    font-size: 14px;
+  }
+}
+.filters__form--heritage {
+  padding-top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  .form-control {
+    width: 23%;
+    .selectric-wrapper {
+      margin-top: 6px;
+    }
+  }
+}
+@media screen and (max-width: 1350px) {
+  .catalog__menu--heritage {
+    .catalog__menu__sections__item {
+      h2 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1150px) and  (min-width: 1001px){
+  .catalog__menu--heritage {
+    .selectric-wrapper {
+      max-width: 200px;
+    }
+    .catalog__menu__filters {
+      flex: 0 0 260px;
+    }
+  }
+  .filters__form--selects {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .catalog__menu--heritage {
+    .selectric-wrapper {
+      max-width: 100%;
+    }
+    .catalog__menu__filters {
+      margin-top: 25px;
+    }
+  }
+  .filters__form--heritage {
+    .form-control {
+      padding-top: 10px;
+      width: 48%;
+      float: left;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .filters__form--heritage {
+    .form-control {
+      width: 100%;
+      margin: 5px 0 !important;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .filters__form--selects {
+    padding: 20px 30px;
   }
 }

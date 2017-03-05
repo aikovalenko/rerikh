@@ -87,3 +87,9 @@
 .link--conditions {
   margin-right: 88px;
 }
+@media screen and (max-width: 800px) {
+  .footer--inside .disclaimer .link {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
