@@ -2098,7 +2098,7 @@ div.panel {
 
 .catalog__menu__sections__item__inner {
   box-sizing: border-box;
-  height: 480px;
+  height: 450px;
   margin: -4px;
   position: relative;
 
@@ -2961,49 +2961,49 @@ div.panel {
 .ya-share2__item_service_vkontakte {
   a {
     &:before {
-      content: "\e900";
+      content: "\e90b";
     }
   }
 }
 .ya-share2__item_service_facebook {
   a {
     &:before {
-      content: "\e901";
+      content: "\e90a";
     }
   }
 }
 .ya-share2__item_service_odnoklassniki {
   a {
     &:before {
-      content: "\e902";
+      content: "\e904";
     }
   }
 }
 .ya-share2__item_service_gplus {
   a {
     &:before {
-      content: "\e903";
+      content: "\e906";
     }
   }
 }
 .ya-share2__item_service_pinterest {
   a {
     &:before {
-      content: "\e904";
+      content: "\e909";
     }
   }
 }
 .ya-share2__item_service_twitter {
   a {
     &:before {
-      content: "\e905";
+      content: "\e908";
     }
   }
 }
 .ya-share2__item_service_lj {
   a {
     &:before {
-      content: "\e906";
+      content: "\e907";
     }
   }
 }
@@ -3350,9 +3350,15 @@ button {
   }
 }
 
-.archive-page .catalog__menu__sections {
-  margin-right: 0;
+.archive-page {
+  .catalog__menu__sections {
+    margin-right: 0;
+  }
+  .catalog__menu__sections__item__inner {
+    height: 480px;
+  }
 }
+
 @media screen and (max-width: 641px) {
   .archive-page .catalog__menu {
     margin-bottom: 50px;
@@ -3398,6 +3404,26 @@ button {
 .lg-actions {
   .lg-prev, .lg-next {
     background-color: transparent;
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #4e4af8;
+    font-size: 30px;
+  }
+  .lg-prev:after {
+    content: "\e900";
+  }
+  .lg-next:before {
+    content: "\e901";
   }
 }
 .lg-backdrop {
@@ -3426,8 +3452,40 @@ button {
     z-index: 1;
   }
 }
+@media screen and (max-height: 700px) {
+  .lg-backdrop {
+    background-color: #d3dae6;
+    &:after {
+      height: 150px;
+
+    }
+    &:before {
+      height: 150px;
+    }
+  }
+}
 .lg-toolbar{
   background-color: transparent;
+  .lg-close {
+    padding-top: 30px;
+    padding-right: 25px;
+  }
+  .lg-close:after {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: #eda02c;
+    content: "\e903";
+  }
 }
 .lg-sub-html {
   bottom: 80px;
