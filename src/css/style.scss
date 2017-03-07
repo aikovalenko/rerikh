@@ -838,7 +838,6 @@ ul {
 }
 .filters {
   display: flex;
-  flex-wrap: wrap;
   margin: 0 0;
   padding: 0 30px;
   background-color: #0c101f;
@@ -852,6 +851,9 @@ ul {
     //text-decoration: none;
     //border-bottom: 1px solid #6381e4;
   }
+}
+.filters--flex-wrap {
+  flex-wrap: wrap;
 }
 .filters__links {
   display: flex;
@@ -1023,6 +1025,7 @@ ul {
   display: inline-block;
   position: relative;
   margin-bottom: 18px;
+  background-color: #0d1226;
   img {
     display: block;
     width: 100%;
@@ -1056,6 +1059,11 @@ ul {
       background-color: #fff;
     }
   }
+}
+img.limitHeight {
+  height: 450px;
+  width: auto;
+  margin: 0 auto;
 }
 .visible {
   opacity: 1 !important;
@@ -1096,7 +1104,7 @@ ul {
       transition: $all2;
       &:hover {
         color: #fff;
-        border-bottom: 1px solid #fff;
+        text-decoration: underline;
         transition: $all2;
       }
     }
@@ -1115,7 +1123,7 @@ ul {
       transition: $all2;
       &:hover {
         color: #fff;
-        border-bottom: 1px solid #fff;
+        text-decoration: underline;
         transition: $all2;
       }
     }
@@ -1899,7 +1907,7 @@ div.panel {
     height: 100%;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     margin: -15px;
     &:hover {
       border: 15px solid pink;
@@ -2041,7 +2049,7 @@ div.panel {
 }
 .catalog__menu__sections__item--foto {
   .catalog__menu__sections__item__inner {
-    background-image: url("/images/des/background_corr.png"), linear-gradient(122deg, rgb(69, 74, 138) 0%, rgb(125, 109, 102) 70%, rgb(181, 144, 65) 100%);
+    background-image: url("/images/des/fotoarchive.jpg"), linear-gradient(122deg, rgb(69, 74, 138) 0%, rgb(125, 109, 102) 70%, rgb(181, 144, 65) 100%);
   }
   /*
   .background {
@@ -2090,7 +2098,7 @@ div.panel {
 
 .catalog__menu__sections__item__inner {
   box-sizing: border-box;
-  height: 450px;
+  height: 480px;
   margin: -4px;
   position: relative;
 
@@ -2254,6 +2262,12 @@ div.panel {
       margin-top: 40px;
       font-size: 20px;
       line-height: 23px;
+    }
+    a {
+      &:hover {
+        border-image: none;
+        border: 15px solid transparent;
+      }
     }
   }
   .catalog__menu__sections__item__inner {
@@ -2859,6 +2873,8 @@ div.panel {
     margin-top: 25px;
   }
   .date {
+    position: absolute;
+    bottom: 30px;
     font-size: 16px;
     margin-top: 25px;
     color: #5267a4;
@@ -2894,9 +2910,6 @@ div.panel {
   position: relative;
   background-image: linear-gradient( 180deg, rgb(113,124,158) 0%, rgb(211,218,230) 100%);
   min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
 }
 .new-item--dark-skin {
