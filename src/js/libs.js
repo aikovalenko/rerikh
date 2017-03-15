@@ -8,4 +8,5 @@
 //= ../libs/slick-carousel/slick/slick.min.js
 //= ../libs/lightgallery/lightgallery.min.js
 //= ../libs/lightgallery/lg-pager.min.js
+//= ../libs/lightgallery/lg-zoom.min.js
 //= ../libs/selectric/jquery.selectric.min.js
