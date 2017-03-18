@@ -51,7 +51,7 @@
                   <div class="info">Эссе, очерки, сказки. – М.: Издательство И.Д.Сытина,<br>1914. – 336 с. </div>
                   <div class="place"><a href="">Музей-институт семьи Рерихов</a></div>
                 </div>
-                <a href="" class="book-btn">
+                <a href="" class="book-btn" data-toggle="modal" data-target="#book">
                   <i class="icon icon-book"></i>
                   <span>Листать</span>
                 </a>
@@ -202,6 +202,13 @@
 
     @@include('partials/footer.html')
     @@include('partials/modals.html')
+
+    <div class="modal fade" id="book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="close" data-dismiss="modal" aria-label="Close"></div>
+      <iframe src="http://grabar.ru/book/603_staraya_ladoga/" frameborder="0" scrolling="no" title="Старая Ладога" height="100%" width="100%"></iframe>
+
+    </div>
+
     <script src='/js/libs.js'></script>
     <script src='/js/scripts.js'></script>
   </body>

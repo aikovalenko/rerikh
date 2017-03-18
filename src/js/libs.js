@@ -10,3 +10,4 @@
 //= ../libs/lightgallery/lg-pager.min.js
 //= ../libs/lightgallery/lg-zoom.min.js
 //= ../libs/selectric/jquery.selectric.min.js
+//= ../libs/bootstrap.min.js
